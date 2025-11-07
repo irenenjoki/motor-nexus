@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request for Vehicle(s) Assessment and Valuation</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #010a18, #022e70);
+      margin: 0;
+      padding: 50px 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 650px;
+      background: #ffffff;
+      margin: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      border: 1px solid #022050;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      background: linear-gradient(90deg, #010a18, #022d5a);
+      text-align: center;
+      color: #fff;
+      padding: 80px 30px;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 28px;
+      background: linear-gradient(90deg, #ffce00, #bd7f0e);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 40px 50px;
+      font-size: 15px;
+      line-height: 1.8;
+      background: #fafcff;
+    }
+
+    .content p {
+      margin: 10px 0;
+    }
+
+    .highlight {
+      color: #003d99;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-weight: 600;
+      color: #0f4fb1;
+      margin-top: 25px;
+      text-decoration: underline;
+    }
+   .cta {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .button {
+      background: linear-gradient(90deg, #011a3f, #007bff);
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      box-shadow: 0 6px 16px rgba(0, 74, 173, 0.25);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: inline-block;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 74, 173, 0.3);
+      background: linear-gradient(90deg, #002b73, #0056d6);
+    }
+    .footer {
+      background: #000814;
+      color: #ffffff;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .footer p {
+      margin: 8px 0;
+    }
+
+    .social-icons {
+      margin: 15px 0 15px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background: #010a22;
+      color: #ccb804;
+      font-size: 16px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background: #bdca02;
+      color: #010431;
+      transform: translateY(-3px) rotate(5deg);
+    }
+
+    .footer small {
+      opacity: 0.8;
+      font-size: 12px;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 style="text-align: right;">🚗 Request for Vehicle(s) Assessment and Valuation</h1>
+    </div>
+
+    <div class="content">
+      <p style="text-align: left; display: flex; align-items: center; gap: 8px;">
+  <img src="nexus.jpg" alt="Underwriter Logo" style="max-width: 120px; height: auto; vertical-align: middle;">
+  <span style="font-weight: 600; font-size: 16px; color: #022e70;">Underwriter Logo</span>
+</p>
+
+      <p><strong>{{underwritter_names}}</strong></p>
+
+      <p><strong>DATE:</strong> {{Date_of_issue}}</p>
+
+      <p class="section-title">TO:</p>
+      <ol>
+        <li>{{service_provider_name}} - {{service_provider_contact}}</li>
+        <li>{{service_provider_name}} - {{service_provider_contact}}</li>
+        <li>{{service_provider_name}} - {{service_provider_contact}}</li>
+      </ol>
+
+      <p><strong>FROM:</strong> {{underwritter_names}}</p>
+      <p><strong>CONTACT:</strong> {{underwritter_email}}</p>
+
+      <p class="section-title">REQUEST DETAILS</p>
+      <p>Kindly let us have your assessment report for the vehicle whose details are indicated below.</p>
+
+      <p><strong>INSURED:</strong> {{client_name}}</p>
+      <p><strong>PERIOD OF COVER:</strong> {{cover_start_date}} to {{cover_end_date}}</p>
+      <p><strong>POLICY NO:</strong> {{policy_no}}</p>
+      <p><strong>BROKER/AGENT:</strong> {{intermediary_name}}</p>
+      <p><strong>CONTACT:</strong> {{broker_contact_number}}</p>
+
+      <p>Please ensure to carry a copy of the Log Book.</p>
+
+      <p>Yours faithfully,<br>
+      <strong>{{underwritter_names}}</strong><br>
+      <em>{{Company Rubber Stamp}}</em></p>
+ <div class="cta">
+        <a href="Private_Motor_Policy.pdf" class="button">View PRIVATE MOTOR INSURANCE POLICY</a>
+      </div>
+      <p class="section-title">Kindly Note:</p>
+      <ol>
+        <li>The vehicle should be taken for valuation within 30 days from the date the cover is issued; otherwise, settlement of any claim will be on market value, and you could be subject to the Average Clause in your insurance policy.</li>
+        <li>It is imperative to have the vehicle valued to ensure prompt claim settlement in the event of an accident or total loss.</li>
+        <li>After valuation, please upload your valuation report on Nexus and your invoice to us for settlement.</li>
+      </ol>
+
+      <p style="font-style: italic; margin-top: 20px;">This is a computer-generated document and therefore does not require a signature.</p>
+    </div>
+
+    <div class="footer">
+      <div class="social-icons">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p>&copy; 2025<strong><br>{{underwritter_names}}</strong></p>
+      <small>All rights reserved | Visit us at 
+        <a href="https://nexus.ke/" style="color:#ffce00; text-decoration:none;">NEXUS</a>
+      </small>
+    </div>
+  </div>
+</body>
+</html>
